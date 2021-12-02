@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 
 
 <!DOCTYPE html>
@@ -9,8 +9,20 @@
         <link rel="stylesheet" href="{% static 'styles.css'%}">
     </head>
     <body>
+        <header class="wrapper">
+            <h1><a href="{% url 'articles:list' %}"><img src="{%static 'logo.png'%}"></a></h1>
+            <nav>
+                <ul>
+                    <li>
+                        <form class="logout-link"action="/accounts/logout/"method="post">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>            
+        </header>
         <div class="wrapper">
-            <h1><a href="{% url 'articles:list'%}"><img src="{%static 'logo.png'%}"></a></h1>
             {% block content %}
             {% endblock %}
 
