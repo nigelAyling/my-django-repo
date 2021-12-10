@@ -8,12 +8,14 @@ class Article(models.Model):
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
     thumb = models.ImageField(default='default.png',blank=True)
-    author  =  models.ForeignKey(User,on_delete=models.CASCADE,default=None) 
-    #add thumbnail and author later
-    #add author later
+    author = models.ForeignKey(User,on_delete=models.DO_NOTHING,default=None) 
+    # author = models.ForeignKey(User,default=None) 
+ 
 
     def __str__(self):
         return self.title
 
     def snippet(self):
         return self.body[:50]+"....."
+
+

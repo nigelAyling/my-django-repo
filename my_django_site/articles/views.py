@@ -19,6 +19,7 @@ def article_create(request):
         form = forms.CreateArticle(request.POST,request.FILES)
         if form.is_valid():
             #save articel to db
+            print('this is a pront>>>>>>>>>>>>>>>>>>>>')
             instance = form.save(commit=False)
             instance.author = request.user
             instance.save
