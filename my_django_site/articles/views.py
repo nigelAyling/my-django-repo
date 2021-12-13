@@ -22,7 +22,7 @@ def article_create(request):
             print('this is a pront>>>>>>>>>>>>>>>>>>>>')
             instance = form.save(commit=False)
             instance.author = request.user
-            instance.save
+            instance.save()
             return redirect("articles:list")
     else:
         form = forms.CreateArticle()
