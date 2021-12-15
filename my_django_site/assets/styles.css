@@ -6,7 +6,7 @@ body{
 }
 
 body *{
-    font-family: Ubuntu;
+    font-family: arial;
 }
 
 h1,h2,h3,h4,h5{
@@ -53,6 +53,7 @@ nav button {
 
 }
 .article{
+    position: relative;
     padding:10px;
     border: 1px solid green;
     padding-bottom:40px;
@@ -65,8 +66,9 @@ nav button {
     padding:10px;
     background:green;
     position:absolute;
+    right:0;
     bottom:0;
-    margin:0;
+    margin:3px;
     color:#0f121f
 }
 
@@ -86,4 +88,47 @@ nav button {
 .article-detail .article p{
    text-align:center;
 
+}
+.site-form{
+    margin-top:60px;
+    border:1px solid green;
+    padding:20px;
+
+}
+.site-form input, .site-form textarea{
+    display:block;
+    margin:20px 0 0 0;
+    padding:10px;
+    border-radius:4px;
+}
+a.highlight{
+    border:1px solid green;
+    padding:10px;
+    border-radius:15px;
+    color:green;
+}
+.helptext, .helptext ul{
+    margin:o auto 20px;
+    color:#bbb;
+    font-size:1em;
+    display:block;
+
+}
+.errorlist li{
+    padding:10px;
+    list-style-type:none;
+    border:1px solid orange;
+    color:#ff5722;
+    margin:10px 0;
+}
+.errorList{
+    padding:0;
+}
+.site-form input[type="submit"]{
+    background:green;
+    border:0;
+    color:white;
+    font-size:1.2em;
+    border-radius:4px;
+    margin:10px 0;
 }
